@@ -1,0 +1,56 @@
+1. What is the difference between forEach and for...of? When would you use each? (0.5 Grade)
+
+forEach() is an array method that executes a function for every element in an array. It always loops through all elements and cannot be stopped using break or continue. It is mainly used when you simply want to perform an action on each item.
+
+for...of is a loop that works with iterable objects such as arrays, strings, maps, and sets. It provides more control because it supports break, continue, and works well with asynchronous operations using await.
+
+Use forEach() for simple iteration over arrays, and use for...of when you need more control over the loop or are working with asynchronous code.
+
+2. What is hoisting and what is the Temporal Dead Zone (TDZ)? Explain with examples. (0.5 Grade)
+
+Hoisting is JavaScript's behavior of moving declarations to the top of their scope before the code is executed. Variables declared with var are hoisted and initialized with undefined, while variables declared with let and const are hoisted but not initialized immediately.
+
+The Temporal Dead Zone (TDZ) is the period between entering a scope and the point where a let or const variable is declared. During this time, attempting to access the variable results in a ReferenceError.
+
+In simple terms, var variables can be accessed before they are declared (though their value is undefined), while let and const variables cannot be accessed before their declaration because they are in the TDZ.
+example;
+...........................................
+console.log(x); // undefined
+
+var x = 10;
+
+console.log(x); // 10
+
+..........................................
+
+3. What are the main differences between == and ===? (0.5 Grade)
+
+The == operator checks whether two values are equal after automatically converting their data types if necessary. This automatic conversion is called type coercion, and it can sometimes produce unexpected results.
+
+The === operator checks both the value and the data type without performing any type conversion. It only returns true if both the value and the type are exactly the same.
+
+In general, === is recommended because it provides more accurate and predictable comparisons.
+
+4. Explain how try...catch works and why it is important in async operations. (0.5 Grade)
+
+The try...catch statement is used to handle errors that occur while a program is running. Code that might produce an error is placed inside the try block. If an error occurs, execution moves to the catch block, where the error can be handled instead of stopping the entire program.
+
+In asynchronous operations, such as when using async and await, try...catch is important because it catches errors from failed promises, such as network or API request failures. This allows the application to handle problems gracefully and continue running without crashing.
+
+5. What’s the difference between type conversion and coercion? Provide examples of each. (0.5 Grade)
+
+Type conversion is the intentional conversion of a value from one data type to another by the programmer. For example, converting a string containing a number into an actual number before performing calculations.
+
+Type coercion is the automatic conversion of one data type to another by JavaScript during operations or comparisons. For example, when comparing a string and a number with the == operator, JavaScript automatically converts one value so the comparison can be made.
+examples;
+...........................................
+let str = "123";
+let num = Number(str);
+
+console.log(num);        
+console.log(typeof num); 
+...........................................
+console.log("5" + 2);
+............................................
+console.log("5" - 2); 
+............................................
