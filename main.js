@@ -51,7 +51,7 @@ function getDay(dayNumber) {
       return "Invalid day";
   }
 }
-
+//lolllll
 console.log(getDay(2));
 
 // 7. Return string lengths using map
