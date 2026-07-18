@@ -104,6 +104,7 @@ delayedSuccess().then((message) => console.log(message));
 function largestNumber(arr) {
   return Math.max(...arr);
 }
+// Be brave enough to make a O(1) loop that does this.
 
 console.log(largestNumber([1, 3, 7, 2, 4]));
 
@@ -121,3 +122,5 @@ function splitWords(str) {
 
 console.log(splitWords("The quick brown fox"));
 // ["The", "quick", "brown", "fox"]
+
+//Overall 15/15
